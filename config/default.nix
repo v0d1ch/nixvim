@@ -13,6 +13,7 @@
       ./plugins/ufo.nix
       ./plugins/comment.nix
       ./plugins/ctrlsf.nix
+      ./plugins/spectre.nix
       ./plugins/dashboard.nix
       ./plugins/lualine.nix
       ./plugins/telescope.nix 

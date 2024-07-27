@@ -29,9 +29,9 @@ in {
   };
   keymaps = [
     (mkKeymap "n" "<leader>f" "<cmd>Telescope find_files<cr>" "Search Find files" )
-    (mkKeymap "n" "<leader>rs" "<cmd>Telescope resume<cr>" "Search Find files" )
-    (mkKeymap "n" "<leader>s" "<cmd>Telescope grep_string<cr>" "Search Find files" )
-    (mkKeymap "n" "<leader>b" "<cmd>Telescope buffers<cr>" "Search Find files" )
+    (mkKeymap "n" "<leader>rs" "<cmd>Telescope resume<cr>" "Resume Telescope" )
+    (mkKeymap "n" "<leader>s" "<cmd>Telescope grep_string<cr>" "Search string" )
+    (mkKeymap "n" "<leader>b" "<cmd>Telescope buffers<cr>" "Search Buffers" )
     (mkKeymap "n" "<leader>k" "<cmd>Telescope current_buffer_fuzzy_find<cr>" "Fuzzy Buffer Search" )
  
   ];
