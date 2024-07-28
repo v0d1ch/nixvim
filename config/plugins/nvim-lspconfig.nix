@@ -1,7 +1,9 @@
 {pkgs, ...}:
 {
-  extraPlugins = with pkgs.vimPlugins;
-   [ nvim-lspconfig 
-   ];
-
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "nvim-lspconfig";
+      src = inputs.nvim-lspconfig;
+    })
+  ];
 }

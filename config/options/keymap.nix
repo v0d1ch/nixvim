@@ -24,5 +24,19 @@
         desc = "Oil toggle";
       };
     }
+
   ];
+
+  extraConfigVim = ''
+          function! FormatCode()
+             let save_pos = getpos(".")
+             :execute '%!fourmolu -q %'
+             call setpos(".", save_pos)
+          endfunction
+
+          augroup RunCommandOnWrite
+             autocmd BufWritePost *.hs :call FormatCode()
+          augroup END
+  '';
+
 }

@@ -3,6 +3,7 @@
   extraPlugins = with pkgs.vimPlugins; [ coc-nvim ];
   ## here we need to make sure enter works for selecting the suggestion
   extraConfigVim = '' 
+    let g:coc_data_home = $HOME . '/.config/coc'
     xmap <leader>a  <Plug>(coc-codeaction-selected)
     nmap <leader>a  <Plug>(coc-codeaction-selected)
     nmap <Leader>d <Plug>(coc-definition)
