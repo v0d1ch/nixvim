@@ -32,12 +32,6 @@
           desc = "Command History";
         };
       };
-      "<leader>b" = {
-        action = "buffers";
-        options = {
-          desc = "+buffer";
-        };
-      };
       "<leader>ff" = {
         action = "find_files";
         options = {
@@ -62,7 +56,7 @@
           desc = "Recent";
         };
       };
-      "<leader>fb" = {
+      "<leader>b" = {
         action = "buffers";
         options = {
           desc = "Buffers";
