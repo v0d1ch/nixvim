@@ -3,8 +3,9 @@
   imports =
     [ ./options/options.nix
       ./options/keymap.nix
+      ./options/color.nix
       ./autocmd.nix
-      ./plugins/tokyodark.nix 
+      # ./plugins/tokyodark.nix 
       ./plugins/bufferline.nix
       ./plugins/treesitter.nix
       ./plugins/nvim-tree.nix

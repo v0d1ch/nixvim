@@ -56,12 +56,18 @@
           desc = "Recent";
         };
       };
-      "<leader>b" = {
+     "<leader>b" = {
         action = "buffers";
         options = {
-          desc = "Buffers";
+          desc = "+buffer";
         };
       };
+      # "<leader>b" = {
+      #   action = "buffers";
+      #   options = {
+      #     desc = "Buffers";
+      #   };
+      # };
       "<C-p>" = {
         action = "git_files";
         options = {

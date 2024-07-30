@@ -43,6 +43,8 @@ in
   keymaps = [
     (mkKeymap "n" "<leader>bp" "<cmd>:BufferLinePick<cr>" "BufferLine Pick")
     (mkKeymap "n" "<cmd>:bp | bd #<cr>" "<leader>bc" "Buffer Delete")
+    (mkKeymap "n" "<leader>l" "<cmd>BufferLineCycleNext<cr>" "Cycle next buffer")
+    (mkKeymap "n" "<leader>h" "<cmd>BufferLineCyclePrev<cr>" "Cycle next buffer")
 
     (mkKeymap "n" "<leader>bP" "<cmd>BufferLineTogglePin<cr>" "Buffer Pin")
     (mkKeymap "n" "<leader>bd" "<cmd>BufferLineSortByDirectory<cr>" "Buffer Sort by dir")

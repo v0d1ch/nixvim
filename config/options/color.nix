@@ -1,0 +1,3 @@
+{
+  colorschemes.tokyonight.enable = true;
+}
