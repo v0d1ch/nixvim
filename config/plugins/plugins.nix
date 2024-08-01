@@ -5,4 +5,5 @@
   plugins.vimtex.enable = true;
   plugins.cmp.enable = true;
   plugins.markdown-preview.enable = true;
+  plugins.illuminate.enable = true;
 }
