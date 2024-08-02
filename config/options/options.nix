@@ -38,6 +38,8 @@
 
     # Start scrolling when the cursor is X lines away from the top/bottom
     scrolloff = 5;
+
+    conceallevel = 2;
   };
 
   userCommands = {
