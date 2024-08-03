@@ -18,6 +18,7 @@
       ./plugins/dashboard.nix
       ./plugins/lualine.nix
       ./plugins/telescope.nix 
+      ./plugins/harpoon.nix
       ./plugins/coc-nvim.nix
       ./plugins/copilot.nix
       ./plugins/project.nix
