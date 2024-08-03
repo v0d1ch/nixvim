@@ -32,7 +32,14 @@
         desc = "Scratch buffer";
       };
     }
-
+    {
+      mode = "x";
+      key = "<leader>p";
+      action = "\"_dP";
+      options = {
+        desc = "Smart paste";
+      };
+    }
   ];
 
   extraConfigVim = ''
