@@ -2,7 +2,7 @@
   globalOpts = {
     # Line numbers
     number = true;
-    relativenumber = false;
+    relativenumber = true;
 
     encoding = "utf-8";
 
@@ -25,7 +25,7 @@
     smarttab = true;
 
     # System clipboard support, needs xclip/wl-clipboard
-    clipboard = "unnamedplus";
+    clipboard = "+unnamedplus";
 
     # Highlight the current line
     cursorline = true;
