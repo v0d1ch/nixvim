@@ -5,7 +5,7 @@
     keymapsSilent = false;
     keymaps = {
       addFile = "<leader>ha";
-      toggleQuickMenu = "<C-h>";
+      toggleQuickMenu = "<leader>b";
       navFile = {
         "1" = "<leader>hj";
         "2" = "<leader>hk";
