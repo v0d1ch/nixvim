@@ -56,12 +56,12 @@
           desc = "Recent";
         };
       };
-     # "<leader>b" = {
-     #    action = "buffers";
-     #    options = {
-     #      desc = "+buffer";
-     #    };
-     #  };
+     "<leader>b" = {
+        action = "buffers";
+        options = {
+          desc = "+buffer";
+        };
+      };
       # "<leader>b" = {
       #   action = "buffers";
       #   options = {
