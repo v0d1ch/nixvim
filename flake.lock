@@ -331,7 +331,24 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "nvim-lspconfig": "nvim-lspconfig",
+        "session-manager": "session-manager",
         "tokyodark": "tokyodark"
+      }
+    },
+    "session-manager": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722584687,
+        "narHash": "sha256-HnNbB5Nx65Zb5oTjED0et+bAAEVX5+8pZxwTZvxRtQ8=",
+        "owner": "Shatur",
+        "repo": "neovim-session-manager",
+        "rev": "cbaebd92dce84e9ba63cb07d3199e5a19b204c1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Shatur",
+        "repo": "neovim-session-manager",
+        "type": "github"
       }
     },
     "systems": {

@@ -13,6 +13,12 @@
       url = "github:dyng/ctrlsf.vim";
       flake = false;
     };
+
+    session-manager = {
+      url = "github:Shatur/neovim-session-manager";
+      flake = false;
+    };
+
     nvim-lspconfig.url = "github:neovim/nvim-lspconfig";
   };
 

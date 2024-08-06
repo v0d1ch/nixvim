@@ -23,6 +23,7 @@
       ./plugins/copilot.nix
       ./plugins/project.nix
       ./plugins/obsidian.nix
+      ./plugins/session.nix
       ./plugins/plugins.nix
     ];
 }
