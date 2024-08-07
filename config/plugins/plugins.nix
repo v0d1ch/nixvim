@@ -6,4 +6,5 @@
   plugins.cmp.enable = true;
   plugins.markdown-preview.enable = true;
   plugins.illuminate.enable = true;
+  plugins.hardtime.enable = true;
 }
