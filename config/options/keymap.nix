@@ -10,7 +10,7 @@
     }
     {
       mode = "n";
-      key = "<leader>g";
+      key = "<leader>gg";
       action = "<cmd>Neogit<cr>";
       options = {
         desc = "Open Neogit";

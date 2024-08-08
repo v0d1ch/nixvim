@@ -7,4 +7,5 @@
   plugins.markdown-preview.enable = true;
   plugins.illuminate.enable = true;
   plugins.hardtime.enable = true;
+  plugins.diffview.enable = true;
 }
