@@ -6,11 +6,13 @@
       ./options/color.nix
       ./autocmd.nix
       # ./plugins/tokyodark.nix 
+      # ./plugins/harpoon.nix
       ./plugins/bufferline.nix
       ./plugins/treesitter.nix
       ./plugins/nvim-tree.nix
       ./plugins/oil.nix
       ./plugins/gitsigns.nix
+      ./plugins/git-conflict.nix
       ./plugins/ufo.nix
       ./plugins/comment.nix
       ./plugins/ctrlsf.nix
@@ -18,7 +20,6 @@
       ./plugins/dashboard.nix
       ./plugins/lualine.nix
       ./plugins/telescope.nix 
-      # ./plugins/harpoon.nix
       ./plugins/coc-nvim.nix
       ./plugins/copilot.nix
       ./plugins/project.nix
