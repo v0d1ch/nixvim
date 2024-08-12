@@ -8,4 +8,5 @@
   plugins.illuminate.enable = true;
   plugins.hardtime.enable = true;
   plugins.diffview.enable = true;
+  plugins.git-conflict.enable = true;
 }
