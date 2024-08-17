@@ -8,6 +8,7 @@
     plugins.illuminate.enable = true;
     plugins.hardtime.enable = true;
     plugins.diffview.enable = true;
+    plugins.treesitter.enable = true;
     plugins.lsp.servers.rust-analyzer = {
         enable = true;
         installCargo = false;

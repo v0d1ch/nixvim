@@ -19,6 +19,11 @@
       flake = false;
     };
 
+    tree-sitter-haskell = {
+      url = "github:tree-sitter/tree-sitter-haskell";
+      flake = false;
+    };
+
     nvim-lspconfig.url = "github:neovim/nvim-lspconfig";
   };
 
