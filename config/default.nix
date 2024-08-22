@@ -7,6 +7,8 @@
       ./autocmd.nix
       # ./plugins/tokyodark.nix 
       # ./plugins/harpoon.nix
+      ./plugins/solarized.nix
+      ./plugins/papercolor.nix
       ./plugins/bufferline.nix
       ./plugins/treesitter.nix
       ./plugins/nvim-tree.nix
