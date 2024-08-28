@@ -14,4 +14,5 @@
         installCargo = false;
         installRustc = false;
     };
+    plugins.fugitive.enable = true;
 }
