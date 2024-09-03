@@ -62,102 +62,6 @@
           desc = "Buffer";
         };
       };
-      # "<leader>fg" = {
-      #   action = "oldfiles";
-      #   options = {
-      #     desc = "Recent";
-      #   };
-      # };
-      # "<leader>b" = {
-      #   action = "buffers";
-      #   options = {
-      #     desc = "Buffers";
-      #   };
-      # };
-      # "<C-p>" = {
-      #   action = "git_files";
-      #   options = {
-      #     desc = "Search git files";
-      #   };
-      # };
-      # "<leader>gc" = {
-      #   action = "git_commits";
-      #   options = {
-      #     desc = "Commits";
-      #   };
-      # };
-      # "<leader>gs" = {
-      #   action = "git_status";
-      #   options = {
-      #     desc = "Status";
-      #   };
-      # };
-      # "<leader>sa" = {
-      #   action = "autocommands";
-      #   options = {
-      #     desc = "Auto Commands";
-      #   };
-      # };
-      # "<leader>sc" = {
-      #   action = "command_history";
-      #   options = {
-      #     desc = "Command History";
-      #   };
-      # };
-      # "<leader>sC" = {
-      #   action = "commands";
-      #   options = {
-      #     desc = "Commands";
-      #   };
-      # };
-      # "<leader>sD" = {
-      #   action = "diagnostics";
-      #   options = {
-      #     desc = "Workspace diagnostics";
-      #   };
-      # };
-      # "<leader>sh" = {
-      #   action = "help_tags";
-      #   options = {
-      #     desc = "Help pages";
-      #   };
-      # };
-      # "<leader>sH" = {
-      #   action = "highlights";
-      #   options = {
-      #     desc = "Search Highlight Groups";
-      #   };
-      # };
-      # "<leader>sk" = {
-      #   action = "keymaps";
-      #   options = {
-      #     desc = "Keymaps";
-      #   };
-      # };
-      # "<leader>sM" = {
-      #   action = "man_pages";
-      #   options = {
-      #     desc = "Man pages";
-      #   };
-      # };
-      # "<leader>sm" = {
-      #   action = "marks";
-      #   options = {
-      #     desc = "Jump to Mark";
-      #   };
-      # };
-      # "<leader>so" = {
-      #   action = "vim_options";
-      #   options = {
-      #     desc = "Options";
-      #   };
-      # };
-      # "<leader>uC" = {
-      #   action = "colorscheme";
-      #   options = {
-      #     desc = "Colorscheme preview";
-      #   };
-      # };
     };
   };
   keymaps = [
@@ -181,6 +85,10 @@
   extraConfigLua = ''
     require("telescope").setup{
       pickers = {
+        buffers = {
+          sort_lastused = true,
+          ignore_current_buffer = true,
+        },
         colorscheme = {
           enable_preview = true
         }
