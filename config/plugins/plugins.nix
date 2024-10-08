@@ -1,4 +1,5 @@
 {
+    plugins.web-devicons.enable = true;
     plugins.neogit.enable = true;
     plugins.coq-nvim.enable = true;
     plugins.undotree.enable = true;
