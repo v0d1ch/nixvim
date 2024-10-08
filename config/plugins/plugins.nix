@@ -7,7 +7,7 @@
     plugins.cmp.enable = true;
     plugins.markdown-preview.enable = true;
     plugins.illuminate.enable = true;
-    plugins.hardtime.enable = true;
+    plugins.hardtime.enable = false;
     plugins.diffview.enable = true;
     plugins.treesitter.enable = true;
     plugins.lsp.servers.rust-analyzer = {

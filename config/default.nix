@@ -5,11 +5,9 @@
       ./options/keymap.nix
       ./options/color.nix
       ./autocmd.nix
-      # ./plugins/tokyodark.nix 
-      # ./plugins/harpoon.nix
       ./plugins/solarized.nix
+      ./plugins/tokyodark.nix
       ./plugins/papercolor.nix
-      # ./plugins/bufferline.nix
       ./plugins/treesitter.nix
       ./plugins/nvim-tree.nix
       ./plugins/oil.nix
@@ -28,5 +26,8 @@
       ./plugins/obsidian.nix
       ./plugins/session.nix
       ./plugins/plugins.nix
+      # ./plugins/tokyodark.nix 
+      # ./plugins/harpoon.nix
+      # ./plugins/bufferline.nix
     ];
 }
