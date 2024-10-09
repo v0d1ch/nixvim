@@ -47,6 +47,12 @@
           desc = "Find text";
         };
       };
+      "<leader>h" = {
+        action = "live_grep_args";
+        options = {
+          desc = "Find text";
+        };
+      };
       "<leader>rs" = {
         action = "resume";
         options = {
