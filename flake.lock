@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "aiken": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708818748,
+        "narHash": "sha256-GFJmpE5J8DNjvmoGdDpy9JWhd2g+oKoEKVphbvuBAFQ=",
+        "owner": "aiken-lang",
+        "repo": "editor-integration-nvim",
+        "rev": "bcad7adea6b99f00e63c405f558c6d16a7f6ecb7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aiken-lang",
+        "repo": "editor-integration-nvim",
+        "type": "github"
+      }
+    },
     "ctrlsf": {
       "flake": false,
       "locked": {
@@ -348,6 +364,7 @@
     },
     "root": {
       "inputs": {
+        "aiken": "aiken",
         "ctrlsf": "ctrlsf",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",

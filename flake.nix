@@ -25,6 +25,12 @@
     };
 
     nvim-lspconfig.url = "github:neovim/nvim-lspconfig";
+
+    aiken = {
+      url = "github:aiken-lang/editor-integration-nvim";
+      flake = false;
+
+    };
   };
 
   outputs =

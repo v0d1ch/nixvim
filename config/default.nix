@@ -25,6 +25,7 @@
       ./plugins/project.nix
       ./plugins/obsidian.nix
       ./plugins/session.nix
+      ./plugins/aiken.nix
       ./plugins/plugins.nix
       # ./plugins/tokyodark.nix 
       # ./plugins/harpoon.nix
