@@ -53,6 +53,7 @@
              autocmd BufWritePost *.hs :call FormatCode()
           augroup END
 
+
           function! Scratch()
               let scratch_buf = bufnr('scratch')
               if scratch_buf == -1
