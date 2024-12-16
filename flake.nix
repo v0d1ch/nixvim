@@ -5,32 +5,17 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    tokyodark = {
-      url = "github:tiagovla/tokyodark.nvim";
-      flake = false;
-    };
     ctrlsf = {
       url = "github:dyng/ctrlsf.vim";
       flake = false;
     };
 
-    session-manager = {
-      url = "github:Shatur/neovim-session-manager";
-      flake = false;
-    };
 
     tree-sitter-haskell = {
       url = "github:tree-sitter/tree-sitter-haskell";
       flake = false;
     };
 
-    nvim-lspconfig.url = "github:neovim/nvim-lspconfig";
-
-    aiken = {
-      url = "github:aiken-lang/editor-integration-nvim";
-      flake = false;
-
-    };
   };
 
   outputs =
