@@ -13,7 +13,7 @@
       ./plugins/treesitter.nix
       # ./plugins/nvim-tree.nix
       ./plugins/oil.nix
-      ./plugins/gitsigns.nix
+      # ./plugins/gitsigns.nix
       ./plugins/git-conflict.nix
       ./plugins/ufo.nix
       ./plugins/comment.nix
