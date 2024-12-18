@@ -23,6 +23,7 @@
     softtabstop = 0;
     expandtab = true;
     smarttab = true;
+    termguicolors = true;
 
     # System clipboard support, needs xclip/wl-clipboard
     clipboard = "unnamedplus";
