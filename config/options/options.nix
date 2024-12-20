@@ -9,7 +9,7 @@
     autoread = true;
 
     # Always show the signcolumn, otherwise text would be shifted when displaying error icons
-    signcolumn = "yes";
+    signcolumn = "no";
 
     # Search
     ignorecase = true;
