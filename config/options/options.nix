@@ -10,6 +10,7 @@
 
     # Always show the signcolumn, otherwise text would be shifted when displaying error icons
     signcolumn = "no";
+    foldcolumn = "0";
 
     # Search
     ignorecase = true;
