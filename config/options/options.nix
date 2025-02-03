@@ -1,7 +1,7 @@
 {self, ...}: {
   globalOpts = {
     # Line numbers
-    number = true;
+    # number = true;
     relativenumber = true;
 
     encoding = "utf-8";
