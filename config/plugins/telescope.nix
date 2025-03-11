@@ -11,12 +11,14 @@
     };
     settings = {
       defaults = {
-        layout_config = {
-          horizontal = {
-            prompt_position = "top";
-          };
-        };
+        layout_strategy = "bottom_pane";
         sorting_strategy = "ascending";
+        layout_config = {
+          height = 0.5;
+        };
+        live_grep = {
+          theme = "ivy";
+        };
       };
     };
     keymaps = {
