@@ -15,7 +15,7 @@
       ./plugins/oil.nix
       # ./plugins/gitsigns.nix
       ./plugins/git-conflict.nix
-      ./plugins/ufo.nix
+      # ./plugins/ufo.nix
       ./plugins/comment.nix
       ./plugins/ctrlsf.nix
       ./plugins/spectre.nix
