@@ -14,5 +14,11 @@
     #     installCargo = false;
     #     installRustc = false;
     # };
+    plugins.web-devicons.enable = true;
+    plugins.mini.enable = true;
     plugins.fugitive.enable = true;
+    plugins.avante.enable = true;
+    plugins.avante.settings = {
+        provider = "copilot";
+    }; 
 }
