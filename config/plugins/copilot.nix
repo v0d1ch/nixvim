@@ -1,12 +1,12 @@
 {    plugins.copilot-lua = {
       enable = true;
-      suggestion = {
+      settings.suggestion = {
         enabled = true;
         autoTrigger = true;
+        panel.enabled = true;
         keymap = {
           accept = "<tab>";
         };
       };
-      panel.enabled = true;
     };
 }
