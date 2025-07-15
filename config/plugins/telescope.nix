@@ -8,6 +8,9 @@
       fzf-native = {
         enable = true;
       };
+      live-grep-args = {
+        enable = true;
+      };
     };
     settings = {
       defaults = {
