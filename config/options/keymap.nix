@@ -49,9 +49,6 @@
              call setpos(".", save_pos)
           endfunction
 
-          augroup RunCommandOnWrite
-             autocmd BufWritePost *.hs :call FormatCode()
-          augroup END
 
 
           function! Scratch()
