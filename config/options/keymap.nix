@@ -40,6 +40,16 @@
         desc = "Smart paste";
       };
     }
+    {
+      mode = "n";          # Normal mode
+      key = "*";           # The key to map
+      action = "*``";      # Perform * then jump back
+      options = {
+        silent = true;     # Optional: suppress messages (common for this mapping)
+        noremap = true;    # Ensures non-recursive mapping (default in Nixvim for safety)
+        desc = "Search word under cursor forward and return to position";  # Optional: description for which-key or docs
+      };
+    }
   ];
 
   extraConfigVim = ''
