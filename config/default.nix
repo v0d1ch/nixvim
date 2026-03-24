@@ -13,16 +13,16 @@
       ./plugins/treesitter.nix
       # ./plugins/nvim-tree.nix
       ./plugins/oil.nix
-      # ./plugins/gitsigns.nix
+      ./plugins/gitsigns.nix
       ./plugins/git-conflict.nix
       # ./plugins/ufo.nix
       ./plugins/comment.nix
       ./plugins/ctrlsf.nix
       ./plugins/spectre.nix
       # ./plugins/dashboard.nix
-      # ./plugins/lualine.nix
+      ./plugins/lualine.nix
       ./plugins/telescope.nix 
-      ./plugins/coc-nvim.nix
+      ./plugins/lsp.nix
       ./plugins/copilot.nix
       ./plugins/project.nix
       # ./plugins/obsidian.nix

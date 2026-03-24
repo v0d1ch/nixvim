@@ -1,7 +1,7 @@
 {self, ...}: {
-  globalOpts = {
+  opts = {
     # Line numbers
-    # number = true;
+    number = true;
     relativenumber = true;
 
     encoding = "utf-8";
@@ -9,12 +9,13 @@
     autoread = true;
 
     # Always show the signcolumn, otherwise text would be shifted when displaying error icons
-    signcolumn = "no";
+    signcolumn = "yes";
     foldcolumn = "0";
 
     # Search
     ignorecase = true;
     smartcase = true;
+    wrapscan = false;
 
     swapfile = false;
 

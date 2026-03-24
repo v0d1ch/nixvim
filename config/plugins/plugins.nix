@@ -1,6 +1,5 @@
 {
     plugins.neogit.enable = true;
-    plugins.coq-nvim.enable = true;
     plugins.undotree.enable = true;
     # plugins.vimtex.enable = true;
     plugins.cmp.enable = true;
@@ -9,11 +8,6 @@
     # plugins.hardtime.enable = true;
     # plugins.diffview.enable = true;
     # plugins.treesitter.enable = true;
-    # plugins.lsp.servers.rust-analyzer = {
-    #     enable = true;
-    #     installCargo = false;
-    #     installRustc = false;
-    # };
     plugins.web-devicons.enable = true;
     plugins.mini.enable = true;
     plugins.fugitive.enable = true;

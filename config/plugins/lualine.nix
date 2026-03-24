@@ -32,12 +32,12 @@ in
                   gui = "bold";
                 };
                 b = {
-                  inherit (themeColors) fg;
-                  bg = themeColors.darkblue;
+                  fg = "#ffffff";
+                  bg = "#2a5aaa";
                 };
                 c = {
-                  inherit (themeColors) fg;
-                  inherit (themeColors) bg;
+                  fg = "#ffffff";
+                  bg = "#1e4080";
                 };
               };
               insert = {
@@ -47,12 +47,12 @@ in
                   gui = "bold";
                 };
                 b = {
-                  inherit (themeColors) fg;
-                  bg = themeColors.darkblue;
+                  fg = "#ffffff";
+                  bg = "#249940";
                 };
                 c = {
-                  inherit (themeColors) fg;
-                  inherit (themeColors) bg;
+                  fg = "#ffffff";
+                  bg = "#1a6030";
                 };
               };
               visual = {
@@ -62,12 +62,12 @@ in
                   gui = "bold";
                 };
                 b = {
-                  inherit (themeColors) fg;
-                  bg = themeColors.darkblue;
+                  fg = "#ffffff";
+                  bg = "#6a28b0";
                 };
                 c = {
-                  inherit (themeColors) fg;
-                  inherit (themeColors) bg;
+                  fg = "#ffffff";
+                  bg = "#481878";
                 };
               };
               replace = {
@@ -77,12 +77,12 @@ in
                   gui = "bold";
                 };
                 b = {
-                  inherit (themeColors) fg;
-                  bg = themeColors.darkblue;
+                  fg = "#ffffff";
+                  bg = "#a02828";
                 };
                 c = {
-                  inherit (themeColors) fg;
-                  inherit (themeColors) bg;
+                  fg = "#ffffff";
+                  bg = "#701818";
                 };
               };
               command = {
@@ -92,12 +92,12 @@ in
                   gui = "bold";
                 };
                 b = {
-                  inherit (themeColors) fg;
-                  bg = themeColors.darkblue;
+                  fg = "#ffffff";
+                  bg = "#8a4800";
                 };
                 c = {
-                  inherit (themeColors) fg;
-                  inherit (themeColors) bg;
+                  fg = "#ffffff";
+                  bg = "#5a2e00";
                 };
               };
               inactive = {
@@ -164,7 +164,7 @@ extraConfigLua = ''
         return { bg = mode_color[vim.fn.mode()], fg = "#000000" }
       end,
       fmt = function()
-        return "${icons.kind.Function}"
+        return ">>="
       end,
     }
 
@@ -198,7 +198,7 @@ extraConfigLua = ''
 
     components.lsp = {
       function()
-        local clients = vim.lsp.get_active_clients()
+        local clients = vim.lsp.get_clients()
         local names = {}
 
         if next(clients) == nil then
@@ -254,20 +254,8 @@ extraConfigLua = ''
       end,
     }
 
-    components.indicator = function()
-      local ok, noice = pcall(require, "noice")
-      if not ok then
-        return ""
-      end
-      return {
-        noice.api.statusline.mode.get,
-        cond = noice.api.statusline.mode.has,
-        color = { fg = "#ff9e64" },
-      }
-    end
-
     components.copilot = function()
-      local lsp_clients = vim.lsp.get_active_clients()
+      local lsp_clients = vim.lsp.get_clients()
       local copilot_active = false
       local str = ""
       if next(lsp_clients) == nil then
@@ -297,7 +285,6 @@ extraConfigLua = ''
       lualine_b = { components.fileformat, "encoding" },
       lualine_c = { components.branch, components.diff },
       lualine_x = {
-        components.indicator(),
         components.diagnostics,
         components.filetype,
         components.lsp,
@@ -487,7 +474,7 @@ extraConfigLua = ''
 #        function()
 #          local msg = "No Active Lsp"
 #          local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-#          local clients = vim.lsp.get_active_clients()
+#          local clients = vim.lsp.get_clients()
 #          if next(clients) == nil then
 #            return msg
 #          end
