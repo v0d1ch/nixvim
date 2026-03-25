@@ -274,6 +274,12 @@ extraConfigLua = ''
       return str
     end
 
+    components.filename = {
+      "filename",
+      path = 1,
+      color = { fg = "#ffffff", gui = "bold" },
+    }
+
     components.location = {
       "location",
       color = { fg = "#ffffff", bg = "#000000" },
@@ -283,7 +289,7 @@ extraConfigLua = ''
     local sections = {
       lualine_a = { components.mode },
       lualine_b = { components.fileformat, "encoding" },
-      lualine_c = { components.branch, components.diff },
+      lualine_c = { components.branch, components.filename },
       lualine_x = {
         components.diagnostics,
         components.filetype,

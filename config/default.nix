@@ -5,7 +5,8 @@
       ./options/keymap.nix
       ./options/color.nix
       ./autocmd.nix
-      # ./plugins/tokyodark.nix 
+      ./plugins/themes.nix
+      # ./plugins/tokyodark.nix
       # ./plugins/harpoon.nix
       # ./plugins/solarized.nix
       # ./plugins/papercolor.nix

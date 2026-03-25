@@ -1,4 +1,8 @@
 {
+  # To switch permanently: change to e.g. `colorscheme = "tokyonight"` and rebuild.
+  # Available: tokyonight, catppuccin, rose-pine, kanagawa, nightfox, carbonfox,
+  #            duskfox, nordfox, dayfox, onedark, gruvbox, github_dark, github_light,
+  #            tokyonight-day, tokyonight-moon, catppuccin-latte, rose-pine-dawn, kanagawa-wave, kanagawa-lotus
   colorschemes.base16.enable = true;
   colorschemes.base16.colorscheme = "synth-midnight-dark";
 
@@ -17,10 +21,4 @@
       sp = "#ECBE7B";
     };
   };
-  # colorschemes.tokyonight.enable = true;
-  # colorschemes.tokyonight.settings.style = "night";
-  # colorschemes.catppuccin.enable = false; 
-  # colorschemes.catppuccin.settings = {
-  #      flavour = "mocha";
-  # };
 }
