@@ -33,7 +33,17 @@
     ];
     mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = false })";
-      "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+      "<Tab>" = ''
+        cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          elseif require('copilot.suggestion').is_visible() then
+            require('copilot.suggestion').accept()
+          else
+            fallback()
+          end
+        end, {'i', 's'})
+      '';
       "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
       "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
       "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";

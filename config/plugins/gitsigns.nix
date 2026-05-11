@@ -8,19 +8,19 @@ in {
       current_line_blame = false;
       signs = {
         add = {
-          text = "${icons.ui.LineLeft}";
+          text = "+";
         };
         change = {
-          text = "${icons.ui.LineLeft}";
+          text = "~";
         };
         delete = {
-          text = "${icons.ui.LineLeft}";
+          text = "-";
         };
         topdelete = {
-          text = "${icons.ui.Triangle}";
+          text = "-";
         };
         changedelete = {
-          text = "${icons.ui.BoldLineLeft}";
+          text = "!";
         };
       };
     };

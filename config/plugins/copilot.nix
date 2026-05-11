@@ -5,7 +5,7 @@
         autoTrigger = true;
         panel.enabled = true;
         keymap = {
-          accept = "<tab>";
+          accept = false;
         };
       };
     };
