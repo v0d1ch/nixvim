@@ -50,7 +50,49 @@
         desc = "Search word under cursor forward and return to position";  # Optional: description for which-key or docs
       };
     }
+    {
+      mode = "x";
+      key = "<leader>hh";
+      action.__raw = ''function() Hoogle.visual() end'';
+      options = {
+        desc = "Hoogle search selection";
+      };
+    }
   ];
+
+  extraConfigLua = ''
+    _G.Hoogle = {}
+
+    Hoogle.url_encode = function(str)
+      return (str:gsub('([^%w%-%._~])', function(c)
+        return string.format('%%%02X', string.byte(c))
+      end))
+    end
+
+    Hoogle.search = function(query)
+      local q = vim.trim(query)
+      if #q == 0 then return end
+      local url = 'http://localhost:8080/?hoogle=' .. Hoogle.url_encode(q)
+      vim.fn.jobstart({'xdg-open', url}, {detach = true})
+    end
+
+    Hoogle.visual = function()
+      local vstart = vim.fn.getpos('v')
+      local vend   = vim.fn.getpos('.')
+      if vstart[2] > vend[2] or (vstart[2] == vend[2] and vstart[3] > vend[3]) then
+        vstart, vend = vend, vstart
+      end
+      local lines = vim.api.nvim_buf_get_lines(0, vstart[2] - 1, vend[2], false)
+      if #lines == 0 then return end
+      lines[#lines] = lines[#lines]:sub(1, vend[3])
+      lines[1]      = lines[1]:sub(vstart[3])
+      Hoogle.search(table.concat(lines, ' '))
+    end
+
+    vim.api.nvim_create_user_command('Hoo', function(opts)
+      Hoogle.search(opts.args)
+    end, { nargs = '+', desc = 'Search local Hoogle' })
+  '';
 
   extraConfigVim = ''
           function! FormatCode()
