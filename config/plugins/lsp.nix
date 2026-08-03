@@ -15,7 +15,6 @@
     keymaps = {
       lspBuf = {
         "K" = "hover";
-        "<leader>h" = "hover";
         "<leader>d" = "definition";
         "<leader>t" = "type_definition";
         "<leader>a" = "code_action";
