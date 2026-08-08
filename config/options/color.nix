@@ -1,13 +1,13 @@
 {
-  # Default theme: GitHub Light. Toggle light/dark at runtime with <leader>tt
+  # Default theme: Tokyo Night. Toggle light/dark at runtime with <leader>tt
   # (or :ToggleTheme). To change the default permanently, edit `colorscheme`
   # below and rebuild.
   # Available (installed via plugins/themes.nix): tokyonight, catppuccin, rose-pine,
   #            kanagawa, nightfox, carbonfox, duskfox, nordfox, dayfox, onedark,
   #            gruvbox, github_dark, github_light, tokyonight-day, tokyonight-moon,
   #            catppuccin-latte, rose-pine-dawn, kanagawa-wave, kanagawa-lotus
-  colorscheme = "github_light";
-  opts.background = "light";
+  colorscheme = "tokyonight-night";
+  opts.background = "dark";
 
   extraConfigLua = /* lua */ ''
     -- Search highlights tuned per background, reapplied on every colorscheme change
@@ -23,11 +23,11 @@
     vim.api.nvim_create_autocmd("ColorScheme", { callback = search_highlights })
     search_highlights()
 
-    -- Toggle between GitHub light and dark themes
+    -- Toggle between Tokyo Night (dark) and GitHub Light
     local function toggle_theme()
       if vim.o.background == "light" then
         vim.o.background = "dark"
-        vim.cmd.colorscheme("github_dark")
+        vim.cmd.colorscheme("tokyonight-night")
       else
         vim.o.background = "light"
         vim.cmd.colorscheme("github_light")
