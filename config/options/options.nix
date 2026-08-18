@@ -58,4 +58,21 @@
 
   globals.mapleader = " ";
 
+  # Route the system clipboard through OSC 52 only when the Wayland socket is
+  # unreachable (Herdr panes export a stale $WAYLAND_DISPLAY; also covers SSH).
+  # When the socket is reachable, vim.g.clipboard stays unset and Neovim uses
+  # its normal wl-copy/xclip provider, so other terminals are unaffected.
+  extraConfigLua = /* lua */ ''
+    local rt, wl = vim.env.XDG_RUNTIME_DIR, vim.env.WAYLAND_DISPLAY
+    local wayland_ok = rt and wl and vim.uv.fs_stat(rt .. "/" .. wl) ~= nil
+    if not wayland_ok then
+      local osc52 = require("vim.ui.clipboard.osc52")
+      vim.g.clipboard = {
+        name = "OSC 52",
+        copy = { ["+"] = osc52.copy("+"), ["*"] = osc52.copy("*") },
+        paste = { ["+"] = osc52.paste("+"), ["*"] = osc52.paste("*") },
+      }
+    end
+  '';
+
 }
