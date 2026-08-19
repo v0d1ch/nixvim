@@ -3,6 +3,10 @@
     treesitter = {
       enable = true;
       settings.indent.enable = true;
+      settings.highlight = {
+        enable = true;
+        additional_vim_regex_highlighting = false;
+      };
       nixvimInjections = true;
       settings.incremental_selection.enable = true;
     };

@@ -5,6 +5,9 @@
       hls = {
         enable = true;
         installGhc = false;
+        settings = {
+          haskell.plugin.semanticTokens.globalOn = true;
+        };
       };
       rust_analyzer = {
         enable = true;
