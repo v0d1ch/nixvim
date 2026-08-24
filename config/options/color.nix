@@ -1,22 +1,23 @@
 {
-  # Default theme: GitHub Dark. Toggle light/dark at runtime with <leader>tt
-  # (or :ToggleTheme). To change the default permanently, edit `colorscheme`
-  # below and rebuild.
+  # Default theme: Paper (light, custom — see plugins/paper.nix; background
+  # matched to the macOS desktop wallpaper). Toggle light/dark at runtime
+  # with <leader>tt (or :ToggleTheme). To change the default permanently,
+  # edit `colorscheme` below and rebuild.
   # Available (installed via plugins/themes.nix): tokyonight, catppuccin, rose-pine,
   #            kanagawa, nightfox, carbonfox, duskfox, nordfox, dayfox, onedark,
   #            gruvbox, github_dark, github_dark_default, github_dark_dimmed,
   #            github_dark_high_contrast, github_dark_colorblind, github_light,
   #            tokyonight-day, tokyonight-moon, catppuccin-latte, rose-pine-dawn,
-  #            kanagawa-wave, kanagawa-lotus
-  colorscheme = "github_dark_default";
-  opts.background = "dark";
+  #            kanagawa-wave, kanagawa-lotus, paper (plugins/paper.nix, light-only)
+  colorscheme = "paper";
+  opts.background = "light";
 
   extraConfigLua = /* lua */ ''
     -- Search highlights tuned per background, reapplied on every colorscheme change
     local function search_highlights()
       if vim.o.background == "light" then
-        vim.api.nvim_set_hl(0, "Search", { bg = "#fff8c5", fg = "#24292f", underline = true, sp = "#0969da" })
-        vim.api.nvim_set_hl(0, "IncSearch", { bg = "#ffdf5d", fg = "#24292f", bold = true, underline = true, sp = "#bf8700" })
+        vim.api.nvim_set_hl(0, "Search", { bg = "#a88a2e", fg = "#202125", underline = true, sp = "#35618a" })
+        vim.api.nvim_set_hl(0, "IncSearch", { bg = "#8a6d1f", fg = "#f4f4f5", bold = true, underline = true, sp = "#9c5a2e" })
       else
         vim.api.nvim_set_hl(0, "Search", { bg = "#1e3a5f", fg = "#d2d2d2", underline = true, sp = "#51afef" })
         vim.api.nvim_set_hl(0, "IncSearch", { bg = "#5a4a00", fg = "#ffffff", bold = true, underline = true, sp = "#ECBE7B" })
@@ -25,14 +26,14 @@
     vim.api.nvim_create_autocmd("ColorScheme", { callback = search_highlights })
     search_highlights()
 
-    -- Toggle between GitHub Dark and GitHub Light
+    -- Toggle between Paper (light) and GitHub Dark
     local function toggle_theme()
       if vim.o.background == "light" then
         vim.o.background = "dark"
         vim.cmd.colorscheme("github_dark_default")
       else
         vim.o.background = "light"
-        vim.cmd.colorscheme("github_light")
+        vim.cmd.colorscheme("paper")
       end
     end
     vim.api.nvim_create_user_command("ToggleTheme", toggle_theme, {})

@@ -10,6 +10,7 @@
       # ./plugins/harpoon.nix
       # ./plugins/solarized.nix
       # ./plugins/papercolor.nix
+      ./plugins/paper.nix
       # ./plugins/bufferline.nix
       ./plugins/treesitter.nix
       # ./plugins/nvim-tree.nix
