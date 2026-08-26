@@ -19,27 +19,32 @@
       bg_dark    = "#a6a7ac", -- Visual / StatusLineNC
       bg_darker  = "#97989e", -- inset / NonText
       border     = "#8b8c92",
-      ink        = "#202125", -- fg
-      ink_muted  = "#55565c", -- Comment / LineNr
-      dim        = "#6e6f76",
+      ink        = "#1b1c20", -- fg
+      ink_muted  = "#4c4d53", -- Comment / LineNr
+      dim        = "#65666d",
       paper      = "#f4f4f5", -- near-white highlight
-      red        = "#a6353b",
-      green      = "#4b7a3d",
-      yellow     = "#8a6d1f",
-      blue       = "#35618a",
-      magenta    = "#7a4b7a",
-      cyan       = "#2e7a79",
-      orange     = "#9c5a2e",
-      red_l      = "#c24950",
-      green_l    = "#63a050",
-      yellow_l   = "#a88a2e",
-      blue_l     = "#4c7eae",
-      magenta_l  = "#9a639a",
-      cyan_l     = "#3e9c9a",
-      diff_add   = "#c3d6bd",
-      diff_chg   = "#cdd0d8",
-      diff_del   = "#d8bcbe",
-      diff_txt   = "#b8c8e0",
+      -- Accents: deep + saturated so they read strongly on the light-gray
+      -- canvas. Tuned for red/green color vision — green is a dark emerald
+      -- (told apart by luminance, not a pale yellow-green), cyan is pushed
+      -- toward teal-blue so it never blends with green, and yellow leans
+      -- amber/ochre to stay off the green axis.
+      red        = "#b3121f",
+      green      = "#067038",
+      yellow     = "#845200",
+      blue       = "#0e4ea0",
+      magenta    = "#96157c",
+      cyan       = "#05708c",
+      orange     = "#bb480a",
+      red_l      = "#cf1f2c",
+      green_l    = "#0f8a4c",
+      yellow_l   = "#a37c00",
+      blue_l     = "#256bb8",
+      magenta_l  = "#ab2f98",
+      cyan_l     = "#1188a8",
+      diff_add   = "#a6d4b6",
+      diff_chg   = "#c4c9d4",
+      diff_del   = "#e6acb2",
+      diff_txt   = "#98b8e6",
     }
 
     local hl = function(group, opts) vim.api.nvim_set_hl(0, group, opts) end
@@ -79,9 +84,9 @@
     -- Syntax
     hl("Comment",    { fg = c.ink_muted, italic = true })
     hl("Constant",   { fg = c.blue })
-    hl("String",     { fg = c.green })
-    hl("Character",  { fg = c.green })
-    hl("Number",     { fg = c.blue })
+    hl("String",     { fg = c.green, bold = true })
+    hl("Character",  { fg = c.green, bold = true })
+    hl("Number",     { fg = c.blue, bold = true })
     hl("Boolean",    { fg = c.blue, bold = true })
     hl("Identifier", { fg = c.ink })
     hl("Function",   { fg = c.cyan, bold = true })

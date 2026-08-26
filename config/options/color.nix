@@ -30,7 +30,7 @@
     local function toggle_theme()
       if vim.o.background == "light" then
         vim.o.background = "dark"
-        vim.cmd.colorscheme("github_dark_default")
+        vim.cmd.colorscheme("github_dark_colorblind")
       else
         vim.o.background = "light"
         vim.cmd.colorscheme("paper")
