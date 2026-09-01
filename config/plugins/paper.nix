@@ -1,8 +1,8 @@
 {
   # "Paper" — a light, custom colorscheme with no upstream plugin.
-  # Background pinned to the current macOS desktop wallpaper color
-  # (rgb 190 191 196 / #bebfc4), matching the ghostty/herdr themes set
-  # alongside this flake. Activate via `colorscheme = "paper"` in
+  # Styled after Kindle e-ink: warm cream canvas (#f0e9d8), sepia ink
+  # (#322e26), muted print-like accents. Matches the ghostty/herdr "paper"
+  # themes in the dotfiles repo. Activate via `colorscheme = "paper"` in
   # options/color.nix (or `:colorscheme paper` at runtime).
   extraFiles."colors/paper.lua".text = /* lua */ ''
     vim.cmd("hi clear")
@@ -14,37 +14,37 @@
     vim.g.colors_name = "paper"
 
     local c = {
-      bg         = "#bebfc4", -- canvas (= wallpaper)
-      bg_dim     = "#b3b4b9", -- subtle panel / CursorLine
-      bg_dark    = "#a6a7ac", -- Visual / StatusLineNC
-      bg_darker  = "#97989e", -- inset / NonText
-      border     = "#8b8c92",
-      ink        = "#1b1c20", -- fg
-      ink_muted  = "#4c4d53", -- Comment / LineNr
-      dim        = "#65666d",
-      paper      = "#f4f4f5", -- near-white highlight
-      -- Accents: deep + saturated so they read strongly on the light-gray
-      -- canvas. Tuned for red/green color vision — green is a dark emerald
-      -- (told apart by luminance, not a pale yellow-green), cyan is pushed
-      -- toward teal-blue so it never blends with green, and yellow leans
+      bg         = "#f0e9d8", -- canvas (cream paper)
+      bg_dim     = "#e5dcc7", -- subtle panel / CursorLine
+      bg_dark    = "#d8cdb4", -- Visual / StatusLineNC
+      bg_darker  = "#c9bda2", -- inset / NonText
+      border     = "#a89c80",
+      ink        = "#322e26", -- fg (sepia ink)
+      ink_muted  = "#5f5849", -- Comment / LineNr
+      dim        = "#746c5c",
+      paper      = "#faf5e9", -- near-white highlight
+      -- Accents: muted and warm-leaning so they read like printed color on
+      -- paper. Still tuned for red/green color vision — green is a dark
+      -- emerald (told apart by luminance, not a pale yellow-green), cyan is
+      -- pushed toward teal so it never blends with green, and yellow leans
       -- amber/ochre to stay off the green axis.
-      red        = "#b3121f",
-      green      = "#067038",
-      yellow     = "#845200",
-      blue       = "#0e4ea0",
-      magenta    = "#96157c",
-      cyan       = "#05708c",
-      orange     = "#bb480a",
-      red_l      = "#cf1f2c",
-      green_l    = "#0f8a4c",
-      yellow_l   = "#a37c00",
-      blue_l     = "#256bb8",
-      magenta_l  = "#ab2f98",
-      cyan_l     = "#1188a8",
-      diff_add   = "#a6d4b6",
-      diff_chg   = "#c4c9d4",
-      diff_del   = "#e6acb2",
-      diff_txt   = "#98b8e6",
+      red        = "#a03528",
+      green      = "#2e6e44",
+      yellow     = "#85621c",
+      blue       = "#3a618c",
+      magenta    = "#7e4a72",
+      cyan       = "#2e7370",
+      orange     = "#9c531f",
+      red_l      = "#bd4a3a",
+      green_l    = "#468a5c",
+      yellow_l   = "#a07d2e",
+      blue_l     = "#5379a3",
+      magenta_l  = "#98618b",
+      cyan_l     = "#45908c",
+      diff_add   = "#cbdcb4",
+      diff_chg   = "#ded6bd",
+      diff_del   = "#e8c2b4",
+      diff_txt   = "#b8cbde",
     }
 
     local hl = function(group, opts) vim.api.nvim_set_hl(0, group, opts) end

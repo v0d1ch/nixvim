@@ -1,6 +1,6 @@
 {
-  # Default theme: Paper (light, custom — see plugins/paper.nix; background
-  # matched to the macOS desktop wallpaper). Toggle light/dark at runtime
+  # Default theme: Paper (light, custom — see plugins/paper.nix; warm
+  # Kindle e-ink cream + sepia ink). Toggle light/dark at runtime
   # with <leader>tt (or :ToggleTheme). To change the default permanently,
   # edit `colorscheme` below and rebuild.
   # Available (installed via plugins/themes.nix): tokyonight, catppuccin, rose-pine,
@@ -16,8 +16,8 @@
     -- Search highlights tuned per background, reapplied on every colorscheme change
     local function search_highlights()
       if vim.o.background == "light" then
-        vim.api.nvim_set_hl(0, "Search", { bg = "#a88a2e", fg = "#202125", underline = true, sp = "#35618a" })
-        vim.api.nvim_set_hl(0, "IncSearch", { bg = "#8a6d1f", fg = "#f4f4f5", bold = true, underline = true, sp = "#9c5a2e" })
+        vim.api.nvim_set_hl(0, "Search", { bg = "#ddbf62", fg = "#322e26", underline = true, sp = "#3a618c" })
+        vim.api.nvim_set_hl(0, "IncSearch", { bg = "#85621c", fg = "#faf5e9", bold = true, underline = true, sp = "#9c531f" })
       else
         vim.api.nvim_set_hl(0, "Search", { bg = "#1e3a5f", fg = "#d2d2d2", underline = true, sp = "#51afef" })
         vim.api.nvim_set_hl(0, "IncSearch", { bg = "#5a4a00", fg = "#ffffff", bold = true, underline = true, sp = "#ECBE7B" })
