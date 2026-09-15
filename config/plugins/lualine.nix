@@ -192,6 +192,24 @@ extraConfigLua = ''
         info = "${icons.diagnostics.BoldInformation}" .. " ",
         hint = "${icons.diagnostics.BoldHint}" .. " ",
       },
+      -- Mouse on the diagnostics counter (right click is unusable: herdr
+      -- opens its own pane menu on it, so everything hangs off left click):
+      --   left click         -> jump to the next diagnostic in this buffer (wraps) and show its message
+      --   shift+left click   -> jump to the previous one
+      --   double left click  -> Telescope list of this buffer's diagnostics (double-click an entry to jump)
+      --   middle click       -> populate and open the location list
+      on_click = function(clicks, button, modifiers)
+        if button == "l" then
+          if clicks >= 2 then
+            require("telescope.builtin").diagnostics({ bufnr = 0 })
+          else
+            local count = modifiers:find("s") and -1 or 1
+            vim.diagnostic.jump({ count = count, wrap = true, float = true })
+          end
+        elseif button == "m" then
+          vim.diagnostic.setloclist({ open = true })
+        end
+      end,
     }
     components.filetype = { "filetype", cond = nil, padding = { left = 1, right = 1 } }
     components.fileformat = { "fileformat", cond = nil, padding = { left = 1, right = 1 }, color = "SLGreen" }
