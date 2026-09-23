@@ -28,6 +28,7 @@
       ./plugins/lsp.nix
       ./plugins/copilot.nix
       ./plugins/project.nix
+      ./plugins/agda.nix
       # ./plugins/obsidian.nix
       # ./plugins/session.nix
       ./plugins/plugins.nix
