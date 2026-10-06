@@ -16,6 +16,11 @@
       flake = false;
     };
 
+    # Aiken ftdetect/syntax/indent for *.ak files; not packaged in nixpkgs.
+    aiken = {
+      url = "github:aiken-lang/editor-integration-nvim";
+      flake = false;
+    };
   };
 
   outputs =

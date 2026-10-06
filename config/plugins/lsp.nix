@@ -9,8 +9,13 @@
           haskell.plugin.semanticTokens.globalOn = true;
         };
       };
+      # The whole Rust toolchain, rust-analyzer included, comes from the
+      # project's flake dev shell so it matches the project's rustc. Bundling
+      # nixpkgs' rust-analyzer here would shadow it: nixvim prepends server
+      # packages to PATH.
       rust_analyzer = {
         enable = true;
+        package = null;
         installCargo = false;
         installRustc = false;
       };

@@ -29,6 +29,7 @@
       ./plugins/copilot.nix
       ./plugins/project.nix
       ./plugins/agda.nix
+      ./plugins/aiken.nix
       # ./plugins/obsidian.nix
       # ./plugins/session.nix
       ./plugins/plugins.nix
