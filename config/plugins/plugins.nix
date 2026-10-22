@@ -1,6 +1,11 @@
-{lib, ...}: {
+{lib, pkgs, inputs, ...}: {
     plugins.neogit = {
         enable = true;
+        package = pkgs.vimPlugins.neogit.overrideAttrs rec {
+            src = inputs.neogit;
+            version = "unstable-${inputs.neogit.shortRev}";
+            name = "vimplugin-neogit-${version}";
+        };
         settings = {
             integrations = {
                 diffview = true;

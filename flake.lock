@@ -71,6 +71,22 @@
         "type": "github"
       }
     },
+    "neogit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791971045,
+        "narHash": "sha256-B2phtEz/UfqooGgIy2RGmKgTiYOOwMP1nIr1qKp9Uy0=",
+        "owner": "NeogitOrg",
+        "repo": "neogit",
+        "rev": "a6549816e62cec7037f1549d8f1659d45635370c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NeogitOrg",
+        "repo": "neogit",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1766902085,
@@ -143,6 +159,7 @@
         "aiken": "aiken",
         "ctrlsf": "ctrlsf",
         "flake-parts": "flake-parts",
+        "neogit": "neogit",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "tree-sitter-haskell": "tree-sitter-haskell"

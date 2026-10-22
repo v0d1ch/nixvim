@@ -5,6 +5,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    # Update NeoGit independently with `nix flake update neogit`.
+    neogit = {
+      url = "github:NeogitOrg/neogit";
+      flake = false;
+    };
     ctrlsf = {
       url = "github:dyng/ctrlsf.vim";
       flake = false;
