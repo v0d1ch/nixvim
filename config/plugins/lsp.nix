@@ -1,7 +1,11 @@
-{ ... }: {
+{ pkgs, ... }: {
+  # gopls needs the Go toolchain on Neovim's PATH to inspect modules.
+  extraPackages = [ pkgs.go ];
+
   plugins.lsp = {
     enable = true;
     servers = {
+      gopls.enable = true;
       hls = {
         enable = true;
         installGhc = false;
