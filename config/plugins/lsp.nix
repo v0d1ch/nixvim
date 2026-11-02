@@ -69,28 +69,14 @@
       update_in_insert = false,
     })
 
-    -- Show type information after the cursor rests on a symbol in these languages.
-    local hover_filetypes = { go = true, rust = true, haskell = true }
-    local hover_group = vim.api.nvim_create_augroup("language_type_hover", { clear = true })
-    vim.o.updatetime = 700
-    vim.api.nvim_create_autocmd("LspAttach", {
-      group = hover_group,
-      callback = function(args)
-        if not hover_filetypes[vim.bo[args.buf].filetype] then return end
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if not client or not client:supports_method("textDocument/hover") then return end
-
-        vim.api.nvim_clear_autocmds({ group = hover_group, buffer = args.buf, event = "CursorHold" })
-        vim.api.nvim_create_autocmd("CursorHold", {
-          group = hover_group,
-          buffer = args.buf,
-          callback = function()
-            if vim.fn.mode() == "n" and #vim.lsp.get_clients({ bufnr = args.buf, method = "textDocument/hover" }) > 0 then
-              vim.lsp.buf.hover({ border = "rounded" })
-            end
-          end,
-        })
-      end,
-    })
   '';
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>i";
+      action.__raw = ''function() vim.lsp.buf.hover({ border = "rounded" }) end'';
+      options.desc = "Show type information";
+    }
+  ];
 }
