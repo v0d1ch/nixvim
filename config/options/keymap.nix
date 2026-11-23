@@ -32,12 +32,23 @@
         desc = "Scratch buffer";
       };
     }
+    # Visual P preserves the source register, so replacements can be repeated.
+    {
+      mode = "x";
+      key = "p";
+      action = "P";
+      options = {
+        noremap = true;
+        desc = "Paste without replacing the register";
+      };
+    }
     {
       mode = "x";
       key = "<leader>p";
-      action = "\"_dP";
+      action = "P";
       options = {
-        desc = "Smart paste";
+        noremap = true;
+        desc = "Paste without replacing the register";
       };
     }
     {
